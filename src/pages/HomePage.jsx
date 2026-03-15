@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ChevronRight, Star, Check, TrendingUp, MessageSquare, Lock } from "lucide-react";
 import { MainLayout } from '../layouts';
+import heroBg from '../assets/hero-bg.png';
 
 const stats = [
     { label: "Licensed Counsellors", value: "500+", icon: "👨‍⚕️" },
@@ -74,7 +75,10 @@ const itemVariants = {
 export const HomePage = () => {
     return (
         <MainLayout>
-        <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+        <div 
+            className="relative min-h-screen overflow-hidden bg-cover bg-center bg-fixed bg-no-repeat"
+            style={{ backgroundImage: `linear-gradient(rgba(248, 250, 252, 0.9), rgba(238, 242, 255, 0.95)), url(${heroBg})` }}
+        >
             {/* Subtle gradient overlays */}
             <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
